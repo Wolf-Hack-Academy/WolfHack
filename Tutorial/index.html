@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <h1>Wolf Hack Academy</h1>
+    <div id="app">
+        <div v-if="screen=='home'">
+            <h2>Welcome</h2>
+            <button v-on:click="screen='login'">Login</button>
+            <button v-on:click="screen='signup'">Sign Up</button>
+        </div> 
+
+        <div v-if="screen=='login'">
+            <button v-on:click="screen='home'">Home</button>
+            <h2>Login</h2>
+            <input type="text" v-model="username" placeholder="Username"/>
+            <input type="text" v-model="password" placeholder="Password"/>
+            <button>Log In</button>
+            <p>Username supplied: {{username}}</p>
+            <p>Password supplied: {{password}}</p>
+            <button v-on:click="screen='forgot'">Forgot your password?</button>
+            <button v-on:click="screen='signup'">Don't have an account yet?</button>
+        </div> 
+
+        <div v-if="screen=='signup'">
+            <button v-on:click="screen='home'">Home</button>
+            <h2>Sign Up</h2>
+            <input type="text" v-model="username" placeholder="Username"/>
+            <input type="text" v-model="password" placeholder="Password"/>
+            <button>Sign Up</button>
+            <p>Username supplied: {{username}}</p>
+            <p>Password supplied: {{password}}</p>
+            <button v-on:click="screen='login'">Already have an account?</button>
+        </div>
+
+        <div v-if="screen=='forgot'">
+            <button v-on:click="screen='home'">Home</button>
+            <h2>Reset Your Password</h2>
+            <input type="text" v-model="email" placeholder="Email"/>
+            <input type="text" v-model="username" placeholder="Username"/>
+            <button>Reset</button>
+            <p>Email supplied: {{email}}</p>
+            <p>Username supplied: {{username}}</p>
+            <button v-on:click="screen='login'">Back to login</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
