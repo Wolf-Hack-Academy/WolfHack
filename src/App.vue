@@ -6,7 +6,6 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <header>
     <div class="wrapper">
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -15,7 +14,6 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/profile">Profile</RouterLink>
         <RouterLink to="/leaderboard">Leaderboard</RouterLink>
         <RouterLink to="/lessons">Lessons</RouterLink>
-
       </nav>
     </div>
   </header>
@@ -37,7 +35,7 @@ header {
 nav {
   width: 100%;
   font-size: 12px;
-  text-align: center;
+  text-align: left;
   margin-top: 2rem;
 }
 
