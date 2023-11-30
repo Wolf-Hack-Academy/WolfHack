@@ -5,24 +5,72 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/signup">Sign Up</RouterLink>
-        <RouterLink to="/login">Log In</RouterLink>
-        <RouterLink to="/profile">Profile</RouterLink>
-        <RouterLink to="/leaderboard">Leaderboard</RouterLink>
-        <RouterLink to="/lessons">Lessons</RouterLink>
-      </nav>
+    <div class="wrapper"> <!-- object for the webpage itself; holds all elements -->
+
+      <div class="navbar">
+        <div class="nav-container">
+
+          <div class="nav-links">
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+            <RouterLink to="/profile">Profile</RouterLink>
+            <RouterLink to="/leaderboard">Leaderboard</RouterLink>
+            <RouterLink to="/lessons">Lessons</RouterLink>
+          </div>
+
+          <div class="auth-buttons">
+            <RouterLink to="/signup" class="auth-button"> Sign Up</RouterLink>
+            <RouterLink to="/login" class="auth-button">Log In</RouterLink>
+          </div>
+          
+        </div>
+
+      
+      </div>
     </div>
   </header>
-
   <RouterView />
 </template>
 
+
+
 <style scoped>
-header {
+.navbar {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.auth-buttons {
+  display: flex;
+}
+
+.auth-button{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+/* header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -82,5 +130,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>
