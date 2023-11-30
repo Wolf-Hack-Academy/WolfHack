@@ -35,6 +35,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 
 <style scoped>
+
 .navbar {
   position: fixed;
   display: flex;
@@ -45,6 +46,7 @@ import HelloWorld from './components/HelloWorld.vue'
   padding: 10px;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 50px;
 }
 
 .nav-container {
