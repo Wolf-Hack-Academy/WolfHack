@@ -6,7 +6,6 @@
 <template>  <!-- format webpage here -->
   <main>
     <div class="wrapper">
-
       <div class="profile-summary">
         <div class="profile-photo"></div> <!-- grab profile photo (initially) from google login -->
         <div id="username" class="profile-stats"> <!-- get username from database -->
@@ -23,10 +22,9 @@
 
 
 <style scoped>
-
-.wrapper{
-  position: relative;
-}
+  .wrapper{
+    position: relative;
+  }
   .profile-summary{
     border: 2px solid #333;
     width: 40vh;
@@ -35,11 +33,11 @@
     min-height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     position: relative;
-    /* margin-bottom: 50px; */
-    /* padding: max(5vh, 50px); */
+    /* margin-top: 15px; ADD THIS TO ANY ELEMENT NEAR THE TOP FOR NAV SPACING */
+    top: 15px;
+    left: 15px;
   }
 
   .profile-photo{
@@ -50,19 +48,15 @@
     min-width: 110px;
     height: 22vh;
     min-height: 110px;
-    position: absolute;
+    position: relative;
     top: max(5vh, 25px);
-    /* margin-bottom: 50px; */
+    margin-bottom: max(10vh, 40px);
   }
 
   .profile-stats{
-    /* top: min(5vh, 25px);
-    padding: max(1vh, 10px); padding between each element */
     font-size: max(3vh, 16px);
+    position: relative;
+    margin-top: 8px;
   }
-
-  /* * {
-    margin: 20px;
-  } */
 
 </style>

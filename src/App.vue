@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
+
 
 <template>
   <header>
@@ -25,7 +25,6 @@ import HelloWorld from './components/HelloWorld.vue'
           
         </div>
 
-      
       </div>
     </div>
   </header>
@@ -33,104 +32,39 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 
-
 <style scoped>
-
-.navbar {
-  position: fixed;
-  display: flex;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: #fff;
-  padding: 10px;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 50px;
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.nav-links{
-  display: flex;
-  justify-content: space-between;
-  width: 70%;
-}
-
-.auth-buttons {
-  display: flex;
-}
-
-.auth-button{
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-
-/* header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: left;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
+  .navbar {
+    position: fixed;
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
+  .nav-container {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  .nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
   }
-} */
+
+  .auth-buttons {
+    display: flex;
+  }
+
+  .auth-button{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
 </style>
