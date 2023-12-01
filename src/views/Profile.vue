@@ -35,7 +35,8 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    /* margin-top: 15px; ADD THIS TO ANY ELEMENT NEAR THE TOP FOR NAV SPACING */
+    margin-top: 15px; 
+    /* ADD THIS TO ANY ELEMENT NEAR THE TOP FOR NAV SPACING */
     top: 15px;
     left: 15px;
   }
@@ -55,6 +56,7 @@
 
   .profile-stats{
     font-size: max(3vh, 16px);
+    font-family: 'garet', Garet-Book;
     position: relative;
     margin-top: 8px;
   }

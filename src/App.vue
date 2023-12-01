@@ -43,6 +43,7 @@ import { RouterLink, RouterView } from 'vue-router'
     padding: 10px;
     justify-content: space-between;
     align-items: center;
+    font-family: 'garet', Garet-Book;
   }
 
   .nav-container {
@@ -67,4 +68,16 @@ import { RouterLink, RouterView } from 'vue-router'
     margin-right: 10px;
   }
 
+</style>
+
+
+
+<style>
+  @font-face {
+    font-family: 'garet';
+    src: url('./src/fonts/garet/Garet-Book.woff2') format('woff2'),
+        url('./src/fonts/garet/Garet-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 </style>
