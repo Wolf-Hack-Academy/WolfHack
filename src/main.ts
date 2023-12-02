@@ -13,7 +13,7 @@ app.use(createPinia())
 app.use(router)
 
 app.use(vue3GoogleLogin, {
-    clientId: '136797609752-lr0vq1da0m2n04a41o7nes1dvt63sik8.apps.googleusercontent.com'
+    clientId: '1075446635926-o26l315ardnls1lvo0jmf8jl2qrc7sp0.apps.googleusercontent.com'
   })
 
 app.mount('#app')
