@@ -10,6 +10,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="navbar">
         <div class="nav-container">
 
+          <img src=".\src\images\wolfHack_logo.svg">
+
           <div class="nav-links">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/about">About</RouterLink>

@@ -4,27 +4,44 @@
 
 
 <template>  <!-- format webpage here -->
-  <main>
-    <div class="wrapper">
-      <div class="profile-summary">
-        <div class="profile-photo"></div> <!-- grab profile photo (initially) from google login -->
-        <div id="username" class="profile-stats"> <!-- get username from database -->
-          @username
-        </div>
-        <div id="points" class="profile-stats"> <!-- get points from database -->
-          xxxx points
-        </div>
-      </div>
-    </div>
 
-  </main>
+  <body>
+    
+
+    <main class="grid-wrapper">
+        <div class="profile-summary">
+          <div class="profile-photo"></div> <!-- grab profile photo (initially) from google login -->
+          <div id="username" class="profile-stats"> <!-- get username from database -->
+            @username
+          </div>
+          <div id="points" class="profile-stats"> <!-- get points from database -->
+            xxxx points
+          </div>
+        </div>
+
+        <!-- testing -->
+        <div class="profile-summary"></div>
+        <div class="profile-summary"></div>
+
+    </main>
+  </body>
+  
 </template>
 
 
 <style scoped>
-  .wrapper{
-    position: relative;
+
+  .body{
+    display: grid;
   }
+  .grid-wrapper{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+  }
+  
   .profile-summary{
     border: 2px solid #333;
     width: 40vh;
@@ -34,11 +51,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    margin-top: 15px; 
-    /* ADD THIS TO ANY ELEMENT NEAR THE TOP FOR NAV SPACING */
+    /* position: relative; */
+    /* margin-top: 15px; 
+    ADD THIS TO ANY ELEMENT NEAR THE TOP FOR NAV SPACING
     top: 15px;
-    left: 15px;
+    left: 15px; */
   }
 
   .profile-photo{

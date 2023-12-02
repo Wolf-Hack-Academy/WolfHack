@@ -2,14 +2,17 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="70.953003mm"
+   height="90.841461mm"
+   viewBox="0 0 70.953003 90.841461"
    version="1.1"
    id="svg5"
    xml:space="preserve"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="wolfHack_logo.svg"
+   inkscape:export-filename="..\..\..\..\..\..\Desktop\wolfHack_logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -26,18 +29,19 @@
      showgrid="false"
      showguides="false"
      inkscape:zoom="0.74564394"
-     inkscape:cx="303.09373"
-     inkscape:cy="256.15443"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
+     inkscape:cx="85.16129"
+     inkscape:cy="102.59589"
+     inkscape:window-width="974"
+     inkscape:window-height="1040"
+     inkscape:window-x="-10"
+     inkscape:window-y="1"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1" /><defs
      id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><g
+     id="layer1"
+     transform="translate(-67.074309,-40.37734)"><g
        transform="matrix(0.00661578,0.00318388,0.00318388,-0.00661578,45.949345,112.90733)"
        fill="#000000"
        stroke="none"
