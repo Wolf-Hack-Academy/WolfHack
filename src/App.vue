@@ -6,12 +6,9 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
     <div class="wrapper"> <!-- object for the webpage itself; holds all elements -->
-
       <div class="navbar">
         <div class="nav-container">
-
           <img src=".\src\images\wolfHack_logo.svg">
-
           <div class="nav-links">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/about">About</RouterLink>
@@ -19,18 +16,15 @@ import { RouterLink, RouterView } from 'vue-router'
             <RouterLink to="/leaderboard">Leaderboard</RouterLink>
             <RouterLink to="/lessons">Lessons</RouterLink>
           </div>
-
           <div class="auth-buttons">
             <RouterLink to="/signup" class="auth-button"> Sign Up</RouterLink>
             <RouterLink to="/login" class="auth-button">Log In</RouterLink>
           </div>
-          
         </div>
-
       </div>
     </div>
+    <RouterView/> <!-- keep in Router within header -->
   </header>
-  <RouterView />
 </template>
 
 

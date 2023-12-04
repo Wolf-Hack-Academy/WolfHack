@@ -1,11 +1,14 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
+  /* max-width: 1280px;
+  margin: 0 auto; */
+  display: grid;
+  padding: 0rem 1.5rem; 
   font-weight: normal;
+  margin-top: 3rem;
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal */
 }
 
 a,
@@ -21,15 +24,15 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   body {
-    display: flex;
+    display: grid;
     place-items: center;
-  }
+  } */
 
-  #app {
+  /* #app {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
-  }
-}
+  } */
+/* } */
