@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="wrapper"> <!-- object for the webpage itself; holds all elements -->
       <div class="navbar">
         <div class="nav-container">
-          <img src="src\assets\wolfHack_logo.svg" height="50">
+          <img src="src\assets\wolfHack_logo.png" height="50">
           <div class="nav-links">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/about">About</RouterLink>
