@@ -2,20 +2,20 @@
 </script>
 
 <template>
+  <html>
   <main>
     <body>
-      <div class="leaderboard">
       <h1 class="welcome">welcome to</h1>
       <h1 class="titles">Wolf Hack Leaderboards</h1>
       
       <div class = "global">
         <h2 class="titles">Global Leaderboard</h2>
       <div class = "board">
-        <div v-for="(usernames, rank) in displayedUsers" :key="rank">
+        <div v-for="(user, rank) in displayedUsers" :key="rank">
           <div class = "player">
-            <span>{{ rank }}</span>
-            <span>@{{ usernames }}</span>
-            <span>1000</span>
+            <span>{{ (currentPage - 1) * 10 + rank + 1 }}</span>
+            <span>@{{ user.username }}</span>
+            <span>{{ user.pointTotal }}</span>
           </div>
         </div>
       </div>
@@ -24,23 +24,21 @@
         <button class="page-button" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
         </div>
       </div>
-    </div>
   </body>
   </main>
+  </html>
 </template>
 
 <script lang ="ts">
-import { query, collection, getDocs } from "firebase/firestore"
+import { getFirestore, collection, query, orderBy, getDocs } from 'firebase/firestore';
 import db from '../firebase/init.js'
 
   export default {
     data() {
       return {
-        usernames: [] as string[],
-        pointValues: [] as number[],
-        modules: [] as string[],
+        leaderboardData: [] as Array<{ username: string; pointTotal: number }>,
         currentPage: 1,
-        pageSize: 2
+        pageSize: 10
       };
     },
     created() {
@@ -48,12 +46,12 @@ import db from '../firebase/init.js'
     },
     computed: {
       totalPages() {
-        return Math.ceil(this.usernames.length / this.pageSize);
+        return Math.ceil(this.leaderboardData.length / this.pageSize);
       },
       displayedUsers() {
         const startIndex = (this.currentPage - 1) * this.pageSize;
         const endIndex = startIndex + this.pageSize;
-        return this.usernames.slice(startIndex, endIndex);
+        return this.leaderboardData.slice(startIndex, endIndex);
       }
     },
     methods: {
@@ -68,16 +66,14 @@ import db from '../firebase/init.js'
         }
       },
       async getUsers() {
-      const queryModules = await getDocs(query(collection(db, 'lessonModules')));
-      const queryUsers = await getDocs(query(collection(db, 'users')));
-      const queryLessonPoints = await getDocs(query(collection(db, 'userLessonPoints')));
-      queryModules.forEach((doc) => {
-        const moduleID = doc.data().lessonID;
-        this.modules.push(moduleID)
-      })
-      queryUsers.forEach((doc) => {
+        const usersCollection = collection(db, 'users');
+        const sortedUsersQuery = query(usersCollection, orderBy('pointTotal', 'desc'));
+        const querySnapshot = await getDocs(sortedUsersQuery);
+
+        querySnapshot.forEach((doc) => {
         const uname = doc.data().username;
-        this.usernames.push(uname)
+        const point = doc.data().pointTotal;
+        this.leaderboardData.push({ username: uname, pointTotal: point });
       })
     }
   }};
@@ -85,17 +81,16 @@ import db from '../firebase/init.js'
 
 <style scoped>
 
-.leaderboard {
-  position: fixed;
-  top: 75px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 75px);
-  background-color: #001E4C;
+body{
+    display: grid;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #001E4C;
   background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
+  background-repeat: repeat-y;
   padding: 20px;
 }
 
