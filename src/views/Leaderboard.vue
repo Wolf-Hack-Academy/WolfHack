@@ -82,7 +82,6 @@ import db from '../firebase/init.js'
 <style scoped>
 
 body{
-    display: grid;
     min-height: 100vh;
     min-width: 100vw;
     background-color: #001E4C;
@@ -112,10 +111,10 @@ body{
 
 .board {
   justify-content: center; 
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   color: silver;
   font-weight: bolder;
-  border: 5px solid silver;
+  
 }
 
 .player {
@@ -125,7 +124,7 @@ body{
   padding: 10px;
   border: 1px solid silver; /* Border for each player box */
   margin-top: 3px;
-  margin-bottom: 3px; /* Adjust spacing between players */
+  margin-bottom: 3px;
 }
 
 .navigation {
