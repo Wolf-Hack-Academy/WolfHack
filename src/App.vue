@@ -47,6 +47,7 @@ import { RouterLink, RouterView } from 'vue-router'
     justify-content: space-between;
     align-items: center;
     font-family: 'garet', Garet-Book;
+    border-bottom: silver solid 2px;
   }
 
   .nav-container {
