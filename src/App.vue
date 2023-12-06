@@ -4,8 +4,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
 
 <template>
+  <div class="wrapper"> <!-- object for the webpage itself; holds all elements -->
   <header>
-    <div class="wrapper"> <!-- object for the webpage itself; holds all elements -->
       <div class="navbar">
         <div class="nav-container">
           <img src="src\assets\wolfHack_logo.png" height="50">
@@ -22,21 +22,25 @@ import { RouterLink, RouterView } from 'vue-router'
           </div>
         </div>
       </div>
-    </div>
     <RouterView/> <!-- keep in Router within header -->
   </header>
+  <body></body>
+</div>
 </template>
 
 
 <style scoped>
+  .wrapper { /* moving all content down to make room for bigger navbar */
+    padding-top: 50px;
+  }
   .navbar {
     position: fixed;
     display: flex;
     top: 0;
     left: 0;
     width: 100%;
-    color: #fff;
-    padding: 10px;
+    background-color: #001E4C;
+    padding: 15px;
     justify-content: space-between;
     align-items: center;
     font-family: 'garet', Garet-Book;

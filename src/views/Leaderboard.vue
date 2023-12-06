@@ -3,16 +3,29 @@
 
 <template>
   <main>
-    <div class="leaderboard">
-    <h1 class="title">Wolf Hack Leaderboard</h1>
-    <div v-for="(usernames, rank) in displayedUsers" :key="rank">
-      <span>@{{ usernames }}</span>
+    <body>
+      <div class="leaderboard">
+      <h1 class="welcome">welcome to</h1>
+      <h1 class="titles">Wolf Hack Leaderboards</h1>
+      
+      <div class = "global">
+        <h2 class="titles">Global Leaderboard</h2>
+      <div class = "board">
+        <div v-for="(usernames, rank) in displayedUsers" :key="rank">
+          <div class = "player">
+            <span>{{ rank }}</span>
+            <span>@{{ usernames }}</span>
+            <span>1000</span>
+          </div>
+        </div>
+      </div>
+      <div class="navigation">
+        <button class="page-button" @click="previousPage" :disabled="currentPage === 1">Previous</button>
+        <button class="page-button" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+        </div>
+      </div>
     </div>
-    <div class="navigation">
-    <button class="page-button" @click="previousPage" :disabled="currentPage === 1">Previous</button>
-    <button class="page-button" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
-    </div>
-  </div>
+  </body>
   </main>
 </template>
 
@@ -71,19 +84,53 @@ import db from '../firebase/init.js'
 </script>
 
 <style scoped>
+
 .leaderboard {
-  max-width: 1000px;
-  padding-top: 200px;
-  margin: 0 auto;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 75px);
+  background-color: #001E4C;
+  background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
   padding: 20px;
-  background-color: silver;
-  border-radius: 10px;
 }
 
-.title {
+.welcome {
   text-align: center;
-  color: rgb(0, 0, 72);
-  margin-bottom: 20px;
+  color: silver;
+  font-style: italic;
+  font-size: 16px;
+}
+.titles {
+  text-align: center;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.global {
+  width: 40%;
+}
+
+.board {
+  justify-content: center; 
+  background-color: black;
+  color: silver;
+  font-weight: bolder;
+  border: 5px solid silver;
+}
+
+.player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid silver; /* Border for each player box */
+  margin-top: 3px;
+  margin-bottom: 3px; /* Adjust spacing between players */
 }
 
 .navigation {
@@ -98,17 +145,20 @@ import db from '../firebase/init.js'
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: rgb(169, 169, 190);
-  color: white;
+  background-color: silver;
+  color: #001E4C;
+  font-weight: bold;
 }
 
 .page-button:disabled {
-  background-color: silver;
+  background-color: rgb(71, 71, 160);
   cursor: not-allowed;
 }
 
 .page-button:hover:not(:disabled) {
-  background-color: navy;
+  background-color: gray;
 }
+
+
 
 </style>
