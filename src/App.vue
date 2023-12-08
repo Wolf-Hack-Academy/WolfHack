@@ -9,17 +9,12 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
       <div class="navbar">
         <div class="nav-container">
-          <img src="src\assets\wolfHack_logo.svg" height="50">
+          <RouterLink to="/"><img src="src\assets\Wolf-Hack-Academy.svg" height="50"></RouterLink>
           <div class="nav-links">
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
-            <RouterLink to="/profile">Profile</RouterLink>
-            <RouterLink to="/leaderboard">Leaderboard</RouterLink>
+            <!--<RouterLink to="/about">About</RouterLink> -->
             <RouterLink to="/lessons">Lessons</RouterLink>
-          </div>
-          <div class="auth-buttons">
-            <RouterLink to="/signup" class="auth-button"> Sign Up</RouterLink>
-            <RouterLink to="/login" class="auth-button">Log In</RouterLink>
+            <RouterLink to="/leaderboard">Leaderboard</RouterLink>
+            <RouterLink to="/profile"><img src="src\assets\pfp.png" height="50"></RouterLink>
           </div>
         </div>
       </div>
@@ -54,27 +49,22 @@ import { RouterLink, RouterView } from 'vue-router'
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 10px;
     width: 100%;
+    height: 100%;
   }
 
   .nav-links{
     display: flex;
     justify-content: space-between;
-    width: 70%;
-  }
-
-  .auth-buttons {
-    display: flex;
-  }
-
-  .auth-button{
-    margin-left: 10px;
-    margin-right: 10px;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    font-size: 20px;
   }
 
 </style>
-
-
 
 <style>
   @font-face {

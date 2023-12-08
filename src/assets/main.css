@@ -21,7 +21,7 @@ a,
 @media (hover: hover) {
   a:hover {
     font-weight: bolder;
-    color: gray;
+    opacity: 50%;
   }
 }
 
