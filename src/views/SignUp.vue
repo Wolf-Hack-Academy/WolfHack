@@ -6,6 +6,9 @@
     <main>
       <h1 class="mainTitle">Sign Up</h1>
       <div class="authenticate-block">
+        <p> <input type='text' placeholder="Email" v-model='email'/> </p>
+        <p> <input type='password' placeholder="Password" v-model='password'/> </p>
+        <p> <button @click="register"> Submit </button> </p>
         <p>Already a user? <RouterLink to="/login" class="auth-button">Log In</RouterLink></p>
       </div>
     </main>

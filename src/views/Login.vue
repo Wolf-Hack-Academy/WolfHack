@@ -13,6 +13,10 @@
       <div class="authenticate-block">
         <GoogleLogin :callback="callback"/>
       </div>
+      <p> <input type='text' placeholder="Email" v-model='email'/> </p>
+      <p> <input type='password' placeholder="Password" v-model='password'/> </p>
+      <p v-if="errMsg"> {{ errMsg }} </p>
+      <p> <button @click="signIn"> Submit </button> </p>
       <p>Not a user? <RouterLink to="/signup" class="auth-button">Sign Up</RouterLink></p>
   </body>
 </template>
