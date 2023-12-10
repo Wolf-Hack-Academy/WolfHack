@@ -1,4 +1,25 @@
 <script setup lang="ts">
+  import { ref } from 'vue'
+  import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth'
+  import { useRouter } from 'vue-router' 
+  
+  const email = ref('')
+  const password = ref('')
+  const router = useRouter() // get a reference to our vue router
+  const register = () => { // when the button is clicked it should execite this
+   
+    const auth = getAuth(); // get the auth api
+    createUserWithEmailAndPassword(auth, email.value, password.value) // need .value because ref()
+    .then((userCredential) => {
+      const user = userCredential.user;
+      console.log('Successfully registered!');
+      router.push('/Profile') // redirect to Profile
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+  }
 </script>
 
 <template>
@@ -8,12 +29,13 @@
       <div class="authenticate-block">
         <p> <input type='text' placeholder="Email" v-model='email'/> </p>
         <p> <input type='password' placeholder="Password" v-model='password'/> </p>
-        <p> <button @click="register"> Submit </button> </p>
+        <p> <button @click="register"> Submit </button> </p> 
         <p>Already a user? <RouterLink to="/login" class="auth-button">Log In</RouterLink></p>
       </div>
     </main>
   </body>
 </template>
+
 
 <style scoped>
 

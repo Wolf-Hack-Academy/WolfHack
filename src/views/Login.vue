@@ -1,21 +1,32 @@
 <script setup lang="ts">
-  const callback = (response) => {
-  // This callback will be triggered when the user selects or login to
-  // his Google account from the popup
-  console.log("Handle the response", response)
-  // requestAccessToken()
-}
+  import { ref } from 'vue'
+  import {getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+  import { useRouter } from 'vue-router' // import router
+
+    const email = ref('')
+    const password = ref('')
+    const router = useRouter() // get a reference to our vue router
+    const signIn = () => {  // when button click this should execute
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth, email.value, password.value) 
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        router.push('/Profile') // redirect to Profile
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  }
+
 </script>
 
 <template>
   <body>
     <h1 class="mainTitle">Login</h1>
-      <div class="authenticate-block">
-        <GoogleLogin :callback="callback"/>
-      </div>
       <p> <input type='text' placeholder="Email" v-model='email'/> </p>
       <p> <input type='password' placeholder="Password" v-model='password'/> </p>
-      <p v-if="errMsg"> {{ errMsg }} </p>
       <p> <button @click="signIn"> Submit </button> </p>
       <p>Not a user? <RouterLink to="/signup" class="auth-button">Sign Up</RouterLink></p>
   </body>

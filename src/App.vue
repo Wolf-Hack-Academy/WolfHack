@@ -1,5 +1,21 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+  import { RouterLink, RouterView } from 'vue-router'
+
+  //this brakes the website but it should just check if the user is logged in.
+  //not sure if its the correct spot but we put this in every time a page needs user info
+
+  /*import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+  const auth = getAuth();
+  onAuthStateChanged(auth, (user) => {
+  if (user) {
+    
+    const uid = user.uid;
+    
+  } else {
+
+  }
+});*/
 
 </script>
 
