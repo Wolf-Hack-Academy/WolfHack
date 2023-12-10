@@ -28,9 +28,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
   .wrapper { /* moving all content down to make room for bigger navbar */
-    width: 100%;
+    /* width: 100%; */
     padding-top: 30px;
-    height: 100%;
+    /* height: 50%; */
   }
   .navbar {
     position: fixed;
@@ -44,6 +44,7 @@ import { RouterLink, RouterView } from 'vue-router'
     align-items: center;
     font-family: 'garet', Garet-Book;
     border-bottom: silver solid 2px;
+    z-index:999999 !important;
   }
 
   .nav-container {

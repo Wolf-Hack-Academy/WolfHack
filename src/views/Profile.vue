@@ -9,12 +9,34 @@
       <div class="wrapper">
         <div class="lessons">
           <div class="in-progress">
-            In-Progress
+            <div>In-Progress</div>
+              <div class="scroll-content">
+                <img class="media-item" src="https://i.kym-cdn.com/photos/images/facebook/002/358/051/9c5.png">
+                <img class="media-item" src="https://i.kym-cdn.com/photos/images/facebook/002/358/051/9c5.png">
+                <img class="media-item" src="https://i.kym-cdn.com/photos/images/facebook/002/358/051/9c5.png">
+                <img class="media-item" src="https://i.kym-cdn.com/photos/images/facebook/002/358/051/9c5.png">
+                <img class="media-item" src="https://i.kym-cdn.com/photos/images/facebook/002/358/051/9c5.png">
+
+              </div>
           </div>
+
+
           <div class="brush-up">
-            Brush-Up
+            <div>Brush-Up</div>
+            <div class="scroll-content">
+                <img class="media-item" src="https://i.kym-cdn.com/photos/images/facebook/002/358/051/9c5.png">
+                <img class="media-item" src="https://i.kym-cdn.com/photos/images/facebook/002/358/051/9c5.png">
+                <img class="media-item" src="https://i.kym-cdn.com/photos/images/facebook/002/358/051/9c5.png">
+                <img class="media-item" src="https://i.kym-cdn.com/photos/images/facebook/002/358/051/9c5.png">
+                <img class="media-item" src="https://i.kym-cdn.com/photos/images/facebook/002/358/051/9c5.png">
+
+              </div>
           </div>
         </div>
+
+
+
+
         <div class="profile-summary">
           <div class="profile-photo"></div> <!-- grab profile photo (initially) from google login -->
           <div class="profile-stats"> <!-- get points from database -->
@@ -27,21 +49,35 @@
 </template>
 
 
-
-
-
-
 <style scoped>
+
+  .in-progress {
+    /* height: 1fr; */
+    overflow: hidden;
+    overflow-y: auto;
+    grid-column: 1;
+  }
+
+  .brush-up {
+    /* height: 1fr; */
+    overflow: hidden;
+    overflow-y: auto;
+    grid-column: 2;
+  }
+
+
+
+
+
   .wrapper{
     display: grid;
     grid-template-columns: 5fr 1fr ;
     margin-top: 50px;
     gap: 1.5rem;
-
     height: fit-content;
     width: fit-content;
     justify-content: center;
-    
+    z-index: -1;
     font-family: 'garet', Garet-Book;
   }
 
@@ -51,7 +87,7 @@
     gap: 1.5rem;
 
     width: 100vh;
-    height: 70vh;
+    height: 100vh;
   }
 
   .profile-summary{
@@ -65,7 +101,7 @@
     width: 100%;
     grid-template-rows: 1fr 1fr;
   }
-
+  
   .profile-photo{
     border: 3px solid #333;
     border-radius: 50%;
@@ -80,7 +116,6 @@
     top: max(5vh, 25px);
     margin-bottom: max(10vh, 40px);
   }
-
   .profile-stats{
     font-size: max(3vh, 16px);
     font-family: 'garet', Garet-Book;
@@ -98,5 +133,6 @@
     font-size: 30px;
     font-family: 'garet', Garet-Book;
     height: 20px;
+    margin-top: 20px;
   }
 </style>
