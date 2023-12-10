@@ -6,9 +6,39 @@
     <h1>Wolf Hack Lessons</h1>
   </div>
   <div class="lessons">
-    <h2>This page contains all the lessons of Wolf Hack Academy, including Basics, Hashcat, and Wireshark. Each lesson will contain a brief description of the topic, some examples, and end with a graded quiz to test your understanding.</h2>
+    <p v-for="lesson in lessons" :key="lesson.lessonID">
+      {{ lesson.lessonID }}<br>
+      Points: {{ lesson.points }}
+    </p>
   </div>
 </template>
+
+<script lang="ts">
+import {query, collection, getDocs, QuerySnapshot} from "firebase/firestore"
+import db from '../firebase/init.js'
+
+  export default{
+    data(){
+      return {
+        lessons: [] as Array<{ lessonID: string; points: number }>
+      }
+    },
+    created(){
+      this.getLesson()
+    },
+    methods: {
+      async getLesson(){
+        const querySnapshot = await getDocs(query(collection(db, 'lessonModules')));
+        
+        querySnapshot.forEach((doc) => {
+        const lessonName = doc.data().lessonID;
+        const pts = doc.data().points;
+        this.lessons.push({lessonID: lessonName, points: pts});
+        })
+      }
+    }
+  }
+</script>
 
 <style>
   .title {
@@ -24,6 +54,12 @@
   }
 
   .lessons {
+    max-width: 300px;
+    padding-top: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: silver;
+    border-radius: 10px;
     text-align: center;
     color: rgb(0, 0, 72);
     margin-bottom: 20px;
