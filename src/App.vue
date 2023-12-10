@@ -1,78 +1,72 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+
 </script>
 
 
 <template>
+  <html>
+  <div class="wrapper"> <!-- object for the webpage itself; holds all elements -->
   <header>
-    <div class="wrapper"> <!-- object for the webpage itself; holds all elements -->
-
       <div class="navbar">
         <div class="nav-container">
-
-          <img src=".\src\images\wolfHack_logo.svg">
-
+          <RouterLink to="/"><img src="src\assets\Wolf-Hack-Academy.svg" height="50"></RouterLink>
           <div class="nav-links">
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
-            <RouterLink to="/profile">Profile</RouterLink>
-            <RouterLink to="/leaderboard">Leaderboard</RouterLink>
+            <!--<RouterLink to="/about">About</RouterLink> -->
             <RouterLink to="/lessons">Lessons</RouterLink>
+            <RouterLink to="/leaderboard">Leaderboard</RouterLink>
+            <RouterLink to="/profile"><img src="src\assets\pfp.png" height="50"></RouterLink>
           </div>
-
-          <div class="auth-buttons">
-            <RouterLink to="/signup" class="auth-button"> Sign Up</RouterLink>
-            <RouterLink to="/login" class="auth-button">Log In</RouterLink>
-          </div>
-          
         </div>
-
       </div>
-    </div>
+    <RouterView/> <!-- keep in Router within header -->
   </header>
-  <RouterView />
+</div>
+</html>
 </template>
 
 
 <style scoped>
+  .wrapper { /* moving all content down to make room for bigger navbar */
+    /* width: 100%; */
+    padding-top: 30px;
+    /* height: 50%; */
+  }
   .navbar {
     position: fixed;
     display: flex;
     top: 0;
     left: 0;
     width: 100%;
-    color: #fff;
-    padding: 10px;
+    background-color: #001E4C;
+    padding: 15px;
     justify-content: space-between;
     align-items: center;
     font-family: 'garet', Garet-Book;
+    border-bottom: silver solid 2px;
+    z-index:999999 !important;
   }
 
   .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 10px;
     width: 100%;
+    height: 100%;
   }
 
   .nav-links{
     display: flex;
     justify-content: space-between;
-    width: 70%;
-  }
-
-  .auth-buttons {
-    display: flex;
-  }
-
-  .auth-button{
-    margin-left: 10px;
-    margin-right: 10px;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    font-size: 20px;
   }
 
 </style>
-
-
 
 <style>
   @font-face {
