@@ -6,6 +6,7 @@
   const email = ref('')
   const password = ref('')
   const router = useRouter() // get a reference to our vue router
+  
   const register = () => { // when the button is clicked it should execite this
    
     const auth = getAuth(); // get the auth api
