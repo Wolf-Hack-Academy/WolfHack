@@ -83,37 +83,8 @@
 </div>
 </template>
 
-<script lang="ts">
-import {query, collection, getDocs, QuerySnapshot} from "firebase/firestore"
-import db from '../firebase/init.js'
 
-  export default{
-    data(){
-      return {
-        lessons: [] as Array<{ lessonID: string; points: number }>
-      }
-    },
-    created(){
-      this.getLesson()
-    },
-    methods: {
-      async getLesson(){
-        const querySnapshot = await getDocs(query(collection(db, 'lessonModules')));
-        
-        querySnapshot.forEach((doc) => {
-          const lessonName = doc.data().lessonID;
-          const pts = doc.data().points;
-          this.lessons.push({lessonID: lessonName, points: pts});
-        })
-      },
-      async getQuiz(){
-
-      }
-    }
-  }
-</script>
-
-<style>
+<style scoped>
   .banner {
     background-image: url(https://plus.unsplash.com/premium_photo-1661963212517-830bbb7d76fc?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
@@ -180,6 +151,18 @@ import db from '../firebase/init.js'
 
     .submit:hover {
       background-color: rgba(192, 192, 192, 0.438)
+    }
+
+    .correct-answer {
+      color: green;
+    }
+
+    .incorrect-answer {
+      color: red;
+    }
+
+    #result {
+      margin-top: 20px;
     }
 
 </style>

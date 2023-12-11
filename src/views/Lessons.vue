@@ -15,30 +15,34 @@
             Points: {{ lesson.points }}
           </p>
         </div> -->
-        <div class="test">
-          
+        <div class="padding">
         </div>
         <div class="lessons">
           <p>Below are the current lesson modules that Wolf Hack Academy has to offer. Each module contains a few different lessons and ends with a quiz to test your understanding.</p>
         </div>
-        <div class="test">
-
+        <div class="padding">
         </div>
         <div class="grid-container">
           <div class="grid-item">
             <h2>Basics (100pts)</h2>
-            <h4>New to cybersecurity? Don't know where to start? Learn some of the basic fundamentals! This module contains an intro to cybersecurity, ethics, and the CIA triad.</h4>
+            <h4>New to cybersecurity? Don't know where to start? Learn some of the basic fundamentals! This module contains an introduction to the cybersecurity discipline, a discussion of ethics, and the CIA triad.</h4>
+            <div class="padding"></div>
             <p><RouterLink to="/lessons/basics" class="lessonRedirect">Enter Module</RouterLink></p>
+            <div class="padding"></div>
           </div>
           <div class="grid-item">
             <h2>Hashcat (200pts)</h2>
-            <h4>test description</h4>
+            <h4>Ever wanted to learn how to crack passwords (ethically)? Want to prepare for cyber competitions and learn about hashes? This module contains an introduction to the password cracking tool Hashcat as well as a discussion of hashing and the importance of secure passwords.</h4>
+            <div class="padding"></div>
             <p><RouterLink to="/lessons/hashcat" class="lessonRedirect">Enter Module</RouterLink></p>
+            <div class="padding"></div>
           </div>
           <div class="grid-item">
             <h2>Wireshark (200pts)</h2>
-            <h4>test description</h4>
+            <h4>A lot of information can be learned through networks. Wireshark is a networking sniffing tool that allows a cybersecurity professional to analyze packets that travel through the internet. This module contains lessons about Wireshark, packet sniffers, and how to use these tools responsibly and ethically.</h4>
+            <div class="padding"></div>
             <p><RouterLink to="/lessons/wireshark" class="lessonRedirect">Enter Module</RouterLink></p>
+            <div class="padding"></div>
           </div>
         </div>
         </div>
@@ -104,9 +108,9 @@ import db from '../firebase/init.js'
   width: 500px;
 }
 
-.test{
-  padding:10px;
-}
+  .padding{
+    padding:10px;
+  }
 
   .lessons {
     margin: auto;
