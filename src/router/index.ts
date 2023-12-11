@@ -39,8 +39,28 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Lessons.vue')
+      component: () => import('../views/Lessons.vue'),
     },
+    {
+      path: '/lessons/basics', 
+      name: 'lessonsBasics', 
+      component: () => import('../views/Basics.vue')
+    },    
+    {
+      path: '/lessons/basics/quiz', 
+      name: 'lessonsBasicsQuiz', 
+      component: () => import('../views/BasicsQuiz.vue')
+    },
+    //{
+    //  path: '/lessons/hashcat', 
+    //  name: 'lessonsHashcat', 
+    //  component: () => import('../views/Lessons.vue')
+    //},
+    //{
+    //  path: '/lessons/wireshark', 
+    //  name: 'lessonsWireshark', 
+    //  component: () => import('../views/Lessons.vue')
+    //},
     {
       path: '/login',
       name: 'login',

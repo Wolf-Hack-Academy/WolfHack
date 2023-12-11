@@ -6,11 +6,7 @@
     <h1>Wolf Hack Lessons</h1>
   </div>
   <div class="lessons">
-    <p v-for="lesson in lessons" :key="lesson.lessonID">
-      {{ lesson.lessonID }}<br>
-      Points: {{ lesson.points }}
-    </p>
-    <p>Enter Module: <RouterLink to="/lessons/basics">Basics Module</RouterLink></p>
+    <p>this is a quiz</p>
   </div>
 </template>
 
