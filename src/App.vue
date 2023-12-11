@@ -15,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
             <!--<RouterLink to="/about">About</RouterLink> -->
             <RouterLink to="/lessons">Lessons</RouterLink>
             <RouterLink to="/leaderboard">Leaderboard</RouterLink>
-            <RouterLink to="/profile"><img src="src\assets\pfp.png" height="50"></RouterLink>
+            <RouterLink to="/profile" id="profile"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Ff9%2F77%2F37%2Ff97737919d8c4caba9c5c73ed5005bac.jpg&f=1&nofb=1&ipt=0c26655a83865821f9bc7e02630649fc9b12a47210f4d88d796057922559b1fb&ipo=images" height="50"></RouterLink>
           </div>
         </div>
       </div>
@@ -27,11 +27,19 @@ import { RouterLink, RouterView } from 'vue-router'
 
 
 <style scoped>
+  #profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
   .wrapper { /* moving all content down to make room for bigger navbar */
     /* width: 100%; */
     padding-top: 30px;
     /* height: 50%; */
   }
+
   .navbar {
     position: fixed;
     display: flex;
