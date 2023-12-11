@@ -9,49 +9,50 @@
   <html>
     <main>
       <body>
-        <header>@username</header>
+        <header>@paige</header>
 
         <div class="brush-up">
           <h class="headers">In-Progress</h>
           <div class="scroll-content">
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
+            <div class="module">
+              <p><RouterLink to="/lessons/basics">Basics Module</RouterLink></p>
+            </div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
           </div>
         </div>
-
 
         <div class="in-progress">
           <h class="headers">Brush-Up</h>
           <div class="scroll-content">
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
-            <div class="module">test 1</div>
+            <div class="module">
+              <p><RouterLink to="/lessons/basics">Basics Module</RouterLink></p>
+            </div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
+            <div class="module">test</div>
           </div>
         </div>
-
 
         <div class="profile-summary">
           <div class="profile-photo"></div>
           <div class="profile-stats">
-            xxxx points
+            300 points
           </div>
         </div>
-
 
       </body>
     </main>
@@ -129,23 +130,22 @@
     width: 100%;
     grid-template-rows: 1fr 1fr;
   }
+
   .profile-photo{
     border: 3px solid white;
     border-radius: 50%;
-
     width: 33vh;
     min-width: 110px;
     height: 33vh;
     min-height: 110px;
-
     position: relative;
     top: max(5vh, 25px);
     margin-bottom: max(10vh, 40px);
-
     background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Ff9%2F77%2F37%2Ff97737919d8c4caba9c5c73ed5005bac.jpg&f=1&nofb=1&ipt=0c26655a83865821f9bc7e02630649fc9b12a47210f4d88d796057922559b1fb&ipo=images');
     background-size: cover;
     background-position: center;
   }
+
   .profile-stats{
     font-size: max(3vh, 16px);
     color: white;
@@ -153,22 +153,4 @@
     position: relative;
     text-align: center;
   }
-/* ------------------------------------------------------------------------- */
-    /* .wrapper{
-    display: grid;
-    grid-template-columns: 5fr 1fr ;
-    margin-top: 50px;
-    gap: 5rem;
-    justify-content: center;
-    z-index: -1;
-    font-family: 'garet', Garet-Book;
-    width: auto-fit;
-  } */
-    /* body{
-    display: flex;
-    min-height: 100vh;
-    min-width: 100vw;
-
-    padding: 20px;
-  } */
 </style>
