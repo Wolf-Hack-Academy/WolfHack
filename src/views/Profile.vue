@@ -15,7 +15,7 @@
           <h class="headers">In-Progress</h>
           <div class="scroll-content">
             <div class="module">
-              <p><RouterLink to="/lessons/basics">Basics Module</RouterLink></p>
+              <p><RouterLink to="/lessons/basics" class="link-text">Basics Module</RouterLink></p>
             </div>
             <div class="module">test</div>
             <div class="module">test</div>
@@ -33,7 +33,7 @@
           <h class="headers">Brush-Up</h>
           <div class="scroll-content">
             <div class="module">
-              <p><RouterLink to="/lessons/basics">Basics Module</RouterLink></p>
+              <p><RouterLink to="/lessons/basics" class="link-text">Basics Module</RouterLink></p>
             </div>
             <div class="module">test</div>
             <div class="module">test</div>
@@ -87,6 +87,10 @@
 
   .module-content{
 
+  }
+
+  .link-text{
+    color: #001E4C;
   }
 /* ------------------------------------------------------------------------- */
   body{
