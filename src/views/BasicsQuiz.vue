@@ -39,13 +39,13 @@
   <div class="padding"></div>
   <div class="question">
     <h3><u>Question 3</u></h3>
-    <h4>What does the CIA acronym stand for in terms of cybersecurity?</h4>
+    <h4>Which of the following describes ethical hacking?</h4>
     <div class="answer">
       <ul>
-        <p><label><input type="radio" name="q3" value="a"> Confidentiality, Integrity, Authorization</label></p>
-        <p><label><input type="radio" name="q3" value="b"> Certification, Integrity, Authentication</label></p>
-        <p><label><input type="radio" name="q3" value="c"> Confidentiality, Integrity, Availability</label></p>
-        <p><label><input type="radio" name="q3" value="d"> Certification, Incident Response, Availability</label></p>
+        <p><label><input type="radio" name="q3" value="a"> Creating viruses to test the resilience of computer systems or networks</label></p>
+        <p><label><input type="radio" name="q3" value="b"> Using packet sniffing tools in a Starbucks to spy on customers</label></p>
+        <p><label><input type="radio" name="q3" value="c"> Cracking your neighbors wifi password just to see if you can</label></p>
+        <p><label><input type="radio" name="q3" value="d"> Conducting penetration testing on a corporate network with proper authorization to identify and address potential security vulnerabilities</label></p>
       </ul>
     </div>
   </div>
