@@ -2,12 +2,14 @@
 </script>
 
 <template>
+  <div class="banner">
   <div class="title">
     <h1>Wolf Hack Lessons</h1>
   </div>
   <div class="lessons">
     <p>this is a quiz</p>
   </div>
+</div>
 </template>
 
 <script lang="ts">
@@ -41,6 +43,17 @@ import db from '../firebase/init.js'
 </script>
 
 <style>
+.banner {
+  background-image: url(https://plus.unsplash.com/premium_photo-1661963212517-830bbb7d76fc?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-color: #001E4C;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  min-height: 100vh;
+  min-width: 100vw;
+  align-content: center;
+  text-align: center;
+}
   .title {
     max-width: 300px;
     padding-top: 200px;
