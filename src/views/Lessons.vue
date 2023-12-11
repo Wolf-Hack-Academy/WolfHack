@@ -2,20 +2,49 @@
 </script>
 
 <template>
-  <div class="banner">
-  <div class="title">
-    <h1>Wolf Hack Lessons</h1>
-  </div>
-  <!-- <div class="lessons">
-    <p v-for="lesson in lessons" :key="lesson.lessonID">
-      {{ lesson.lessonID }}<br>
-      Points: {{ lesson.points }}
-    </p>
-  </div> -->
-  <div class="lessons">
-    <p>Enter Module: <RouterLink to="/lessons/basics">Basics Module</RouterLink></p>
-  </div>
-</div>
+  <html>
+    <main>
+      <body>
+        <div class="banner">
+        <div class="title">
+          <h1>Wolf Hack Lessons</h1>
+        </div>
+        <!-- <div class="lessons">
+          <p v-for="lesson in lessons" :key="lesson.lessonID">
+            {{ lesson.lessonID }}<br>
+            Points: {{ lesson.points }}
+          </p>
+        </div> -->
+        <div class="test">
+          
+        </div>
+        <div class="lessons">
+          <p>Below are the current lesson modules that Wolf Hack Academy has to offer. Each module contains a few different lessons and ends with a quiz to test your understanding.</p>
+        </div>
+        <div class="test">
+
+        </div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <h2>Basics (100pts)</h2>
+            <h4>New to cybersecurity? Don't know where to start? Learn some of the basic fundamentals! This module contains an intro to cybersecurity, ethics, and the CIA triad.</h4>
+            <p><RouterLink to="/lessons/basics" class="lessonRedirect">Enter Module</RouterLink></p>
+          </div>
+          <div class="grid-item">
+            <h2>Hashcat (200pts)</h2>
+            <h4>test description</h4>
+            <p><RouterLink to="/lessons/hashcat" class="lessonRedirect">Enter Module</RouterLink></p>
+          </div>
+          <div class="grid-item">
+            <h2>Wireshark (200pts)</h2>
+            <h4>test description</h4>
+            <p><RouterLink to="/lessons/wireshark" class="lessonRedirect">Enter Module</RouterLink></p>
+          </div>
+        </div>
+        </div>
+      </body>
+    </main>
+  </html>
 </template>
 
 <script lang="ts">
@@ -62,26 +91,60 @@ import db from '../firebase/init.js'
   }
 
   .title {
-    max-width: 300px;
-    padding-top: 200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: silver;
-    border-radius: 10px;
-    text-align: center;
-    color: rgb(0, 0, 72);
-    margin-bottom: 20px;
-  }
+  margin: auto;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: white;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 3px solid silver;
+  border-radius: 20px 20px 0 0;
+  height: 20%;
+  width: 500px;
+}
+
+.test{
+  padding:10px;
+}
 
   .lessons {
-    max-width: 300px;
-    padding-top: 200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: silver;
-    border-radius: 10px;
+    margin: auto;
     text-align: center;
-    color: rgb(0, 0, 72);
-    margin-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid silver;
+    height: 20%;
+    width: 1000px;
+  }
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    border: 2px solid silver;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+  }
+  .grid-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid silver;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color:white;
+  }
+
+  .lessonRedirect{
+    border: 2px solid greenyellow;
+    padding: 5px;
+    color: greenyellow;
+    text-decoration:underline;
+    padding-top: 1px;
   }
 </style>

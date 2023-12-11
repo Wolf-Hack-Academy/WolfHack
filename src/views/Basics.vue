@@ -6,9 +6,33 @@
   <div class="title">
     <h1>Wolf Hack Lessons</h1>
   </div>
-  <div class="lessons">
-    <p><RouterLink to="/lessons/basics/quiz">Take the Quiz!</RouterLink></p>
+  <div class="padding"></div>
+  <div class="module">
+    <h1>Basics</h1>
+    <div class="lessons">
+      <h1><u>Introduction to Cybersecurity</u></h1>
+          <div class="lessonContent">
+            <h2>test</h2>
+          </div>
+    </div>
+    <div class="padding"></div>
+    <div class="lessons">
+      <h1><u>Ethics</u></h1>
+          <div class="lessonContent">
+            <h2>test</h2>
+          </div>
+    </div>
+    <div class="padding"></div>
+    <div class="lessons">
+      <h1><u>CIA Triad</u></h1>
+          <div class="lessonContent">
+            <h2>test</h2>
+          </div>
+    </div>
+    <div class="padding"></div>
+    <p><RouterLink to="/lessons/basics/quiz" class="quiz">Take the Quiz!</RouterLink></p>
   </div>
+  <div class="padding"></div>
 </div>
 </template>
 
@@ -40,9 +64,18 @@ import db from '../firebase/init.js'
       }
     }
   }
+
 </script>
 
-<style>
+<style>    
+
+.nav-button {
+  margin: 5px;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
 .banner {
   background-image: url(https://plus.unsplash.com/premium_photo-1661963212517-830bbb7d76fc?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-size: cover;
@@ -54,27 +87,70 @@ import db from '../firebase/init.js'
   align-content: center;
   text-align: center;
 }
-  .title {
-    max-width: 300px;
-    padding-top: 200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: silver;
-    border-radius: 10px;
+
+.title {
+  margin: auto;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: white;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 4px solid silver;
+  border-radius: 20px 20px 0 0;
+  height: 20%;
+  width: 500px;
+}
+
+  .quiz {
+    margin: auto;
     text-align: center;
-    color: rgb(0, 0, 72);
-    margin-bottom: 20px;
+    padding-bottom: 25px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 20%;
+    width: 300px;
+    border: 2px solid greenyellow;
+    padding: 5px;
+    color: greenyellow;
+    text-decoration:underline;
+    padding-top: 1px;
+  }
+.padding{
+  padding:10px;
+}
+
+.module {
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid silver;
+    height: 20%;
+    width: 500px;
   }
 
   .lessons {
-    max-width: 300px;
-    padding-top: 200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: silver;
-    border-radius: 10px;
+    margin: auto;
     text-align: center;
-    color: rgb(0, 0, 72);
-    margin-bottom: 20px;
+    padding-top: 25px;
+    color: white;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 20%;
+    width: 350px;
+  }
+
+  .lessonContent{
+    margin: auto;
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+    font-size: 10px;
+    height: 20%;
+    width: 350px;
   }
 </style>
