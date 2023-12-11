@@ -12,7 +12,7 @@
     <div class="lessons">
       <h1><u>Introduction to Cybersecurity</u></h1>
           <div class="lessonContent">
-            <h2>test</h2>
+            <h2>What is Cybersecurity? Although it is a very broad term, it can be defined as the practice of protecting computer systems, networks, and data from theft, damage, or unauthorized access.</h2>
           </div>
     </div>
     <div class="padding"></div>
@@ -130,10 +130,10 @@ import db from '../firebase/init.js'
     text-align: center;
     padding-top: 25px;
     color: white;
-    font-size: 10px;
+    font-size: 13px;
     background-color: rgba(0, 0, 0, 0.5);
     height: 20%;
-    width: 350px;
+    width: 450px;
   }
 
   .lessonContent{
@@ -143,6 +143,6 @@ import db from '../firebase/init.js'
     color: white;
     font-size: 10px;
     height: 20%;
-    width: 350px;
+    width: 450px;
   }
 </style>
