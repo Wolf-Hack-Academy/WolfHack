@@ -1,7 +1,4 @@
-<script setup lang="ts">  // write functions here
-  import { getFirestore, collection, query, orderBy, getDocs, where } from 'firebase/firestore';
-  import db from '../firebase/init.js'
-
+<script setup lang="ts">
 </script>
 
 
@@ -9,10 +6,11 @@
   <html>
     <main>
       <body>
-        <header>@paige</header>
+        <header>@{{ username }}</header>
+        <!-- <header>@username</header> -->
 
         <div class="brush-up">
-          <h class="headers">In-Progress</h>
+          <div class="headers">In-Progress</div>
           <div class="scroll-content">
             <div class="module">
               <p><RouterLink to="/lessons/basics" class="link-text">Basics Module</RouterLink></p>
@@ -30,7 +28,7 @@
         </div>
 
         <div class="in-progress">
-          <h class="headers">Brush-Up</h>
+          <div class="headers">Brush-Up</div>
           <div class="scroll-content">
             <div class="module">
               <p><RouterLink to="/lessons/basics" class="link-text">Basics Module</RouterLink></p>
@@ -49,9 +47,7 @@
 
         <div class="profile-summary">
           <div class="profile-photo"></div>
-          <div class="profile-stats">
-            300 points
-          </div>
+          <div class="profile-stats">{{ total_points }} points</div>
         </div>
 
       </body>
@@ -59,6 +55,34 @@
   </html>
 </template>
 
+<script lang ="ts">
+import { doc, getDoc, collection } from 'firebase/firestore';
+import db from '../firebase/init.js'
+
+  export default{
+    created(){
+      this.getUsername()
+      this.getTotalPoints()
+    },
+    data(){
+      return {
+        username: '',
+        total_points: ''
+      }
+    },
+    methods:{
+      async getUsername(){
+        const user = await getDoc(doc(db, 'users', '9okIaNorlt3kqSPpKEcl'))
+        this.username = user.data().username
+      },
+      async getTotalPoints(){
+        const user = await getDoc(doc(db, 'users', '9okIaNorlt3kqSPpKEcl'))
+        this.total_points = user.data().pointTotal
+      }
+    }
+  }
+
+</script>
 
 <style scoped>
   .in-progress {
