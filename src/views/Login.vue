@@ -6,7 +6,11 @@
     const email = ref('')
     const password = ref('')
     const router = useRouter() // get a reference to our vue router
+    
     const signIn = () => {  // when button click this should execute
+      
+      // the next section of code mostly comes from https://firebase.google.com/docs/auth/web/start
+      
       const auth = getAuth();
       signInWithEmailAndPassword(auth, email.value, password.value) 
       .then((userCredential) => {

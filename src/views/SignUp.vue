@@ -9,8 +9,9 @@
   
   const register = () => { // when the button is clicked it should execite this
    
+    // the next section of code mostly comes from https://firebase.google.com/docs/auth/web/start
     const auth = getAuth(); // get the auth api
-    createUserWithEmailAndPassword(auth, email.value, password.value) // need .value because ref()
+    createUserWithEmailAndPassword(auth, email.value, password.value) 
     .then((userCredential) => {
       const user = userCredential.user;
       console.log('Successfully registered!');
