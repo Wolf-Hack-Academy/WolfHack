@@ -5,8 +5,10 @@
   <html>
     <main>
       <body>
+
         <h1 class="mainTitle">Wolf Hack Leaderboards</h1>
   
+        <!--Used much of this documentation for a Firebase-based leaderboard: https://firebase.google.com/codelabs/build-leaderboards-with-firestore#2-->
         <div class = "global">
           <h2 class="globalTitle">Global Leaderboard</h2>
 
@@ -51,6 +53,7 @@
 import { getFirestore, collection, query, orderBy, getDocs, where } from 'firebase/firestore';
 import db from '../firebase/init.js'
 
+// Documentation for export default here: https://vuejs.org/api/options-state.html
   export default {
     data() {
       return {
