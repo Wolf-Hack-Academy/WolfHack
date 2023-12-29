@@ -17,6 +17,8 @@ CS425 senior project at the University of Nevada, Reno
 #### When you are ready to test
 * npm run dev (updates live on save)
 
+## Github
+
 #### Commit
 * git add .
 * git commit -m "message"
